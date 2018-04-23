@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RichEditAPISample", "RichEditAPISample\RichEditAPISample.csproj", "{FDF4AE8A-FA4C-44A7-BB0B-D9F2DCAA0C2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDF4AE8A-FA4C-44A7-BB0B-D9F2DCAA0C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDF4AE8A-FA4C-44A7-BB0B-D9F2DCAA0C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDF4AE8A-FA4C-44A7-BB0B-D9F2DCAA0C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDF4AE8A-FA4C-44A7-BB0B-D9F2DCAA0C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
