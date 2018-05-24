@@ -446,9 +446,7 @@ Namespace RichEditAPISample
 			Dim matches = Regex.Matches(sourceCode, RegexRegionPattern, RegexOptions.Singleline)
 
 			For Each match In matches
-				Dim matchString As String = match.ToString()
-				Dim splitter As String = If(matchString.IndexOf(ControlChars.CrLf) >= 0, ControlChars.CrLf, ControlChars.Lf)
-				Dim lines() As String = match.ToString().Split(New String() { splitter }, StringSplitOptions.None)
+				Dim lines() As String = match.ToString().Split(New String() { Constants.vbCrLf }, StringSplitOptions.None)
 
 				If lines.Length <= 2 Then
 					Continue For
