@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [RichEditControlActions.cs](./CS/RichEditAPISample/CodeExamples/RichEditControlActions.cs) (VB: [RichEditControlActions.vb](./VB/RichEditAPISample/CodeExamples/RichEditControlActions.vb))
+<!-- default file list end -->
 # WinForms - The RichEditControl's common API
 
 
