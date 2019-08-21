@@ -608,7 +608,7 @@ namespace RichEditAPISample.CodeExamples {
 
             protected override void ExecuteCore() {
                 base.ExecuteCore();
-                if(!DocumentServer.Modified) {
+                if(!(this.Control as RichEditControl).Modified) {
                     MessageBox.Show("Document is saved successfully");
                 }
             }
@@ -619,9 +619,9 @@ namespace RichEditAPISample.CodeExamples {
             public CustomSaveDocumentAsCommand(IRichEditControl richEdit) : base(richEdit) { }
 
             protected override void ExecuteCore() {
-                DocumentServer.Modified = true;
+                (this.Control as RichEditControl).Modified = true;
                 base.ExecuteCore();
-                if(!DocumentServer.Modified) {
+                if(!(this.Control as RichEditControl).Modified) {
                     MessageBox.Show("Document is saved successfully");    
                 }                
             }
