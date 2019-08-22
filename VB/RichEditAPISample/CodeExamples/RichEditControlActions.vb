@@ -622,7 +622,7 @@ Namespace RichEditAPISample.CodeExamples
 
 			Protected Overrides Sub ExecuteCore()
                 MyBase.ExecuteCore()
-                If (Not DocumentServer.Modified) Then
+                If (Not TryCast(Me.Control, RichEditControl).Modified) Then
                     MessageBox.Show("Document is saved successfully")
                 End If
             End Sub
@@ -635,9 +635,9 @@ Namespace RichEditAPISample.CodeExamples
 			End Sub
 
 			Protected Overrides Sub ExecuteCore()
-                DocumentServer.Modified = True
+                TryCast(Me.Control, RichEditControl).Modified = True
                 MyBase.ExecuteCore()
-                If (Not DocumentServer.Modified) Then
+                If (Not TryCast(Me.Control, RichEditControl).Modified) Then
                     MessageBox.Show("Document is saved successfully")
                 End If
             End Sub
