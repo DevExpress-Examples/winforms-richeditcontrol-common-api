@@ -7,6 +7,7 @@ Imports DevExpress.XtraRichEdit.Commands
 Imports DevExpress.XtraBars
 Imports System.Windows.Forms
 Imports System.Linq
+Imports DevExpress.Portable
 
 
 Namespace RichEditAPISample.CodeExamples
@@ -647,7 +648,7 @@ Namespace RichEditAPISample.CodeExamples
     		Private Shared Sub SimpleViewLineNumbering(ByVal richEditControl As RichEditControl, ByVal buttonCustomAction As BarButtonItem)
 '			#Region "#SimpleViewLineNumbering"
 			richEditControl.LoadDocument("Documents\Grimm.docx", DevExpress.XtraRichEdit.DocumentFormat.OpenXml)
-			richEditControl.Views.SimpleView.Padding = New System.Windows.Forms.Padding(60, 4, 4, 0)
+			richEditControl.Views.SimpleView.Padding = New PortablePadding(60, 4, 4, 0)
 			richEditControl.Views.SimpleView.AllowDisplayLineNumbers = True
 			richEditControl.ActiveViewType = RichEditViewType.Simple
 			richEditControl.Document.Sections(0).LineNumbering.CountBy = 1

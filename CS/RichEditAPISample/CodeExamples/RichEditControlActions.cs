@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Linq;
 using System.IO;
 using System.Drawing;
+using DevExpress.Portable;
 
 namespace RichEditAPISample.CodeExamples {
     public static class RichEditControlActions {
@@ -631,7 +632,7 @@ namespace RichEditAPISample.CodeExamples {
         static void SimpleViewLineNumbering(RichEditControl richEditControl, BarButtonItem buttonCustomAction) {
             #region #SimpleViewLineNumbering
             richEditControl.LoadDocument("Documents\\Grimm.docx", DevExpress.XtraRichEdit.DocumentFormat.OpenXml);
-            richEditControl.Views.SimpleView.Padding = new System.Windows.Forms.Padding(60, 4, 4, 0);
+            richEditControl.Views.SimpleView.Padding = new PortablePadding(60, 4, 4, 0);
             richEditControl.Views.SimpleView.AllowDisplayLineNumbers = true;
             richEditControl.ActiveViewType = RichEditViewType.Simple;
             richEditControl.Document.Sections[0].LineNumbering.CountBy = 1;
