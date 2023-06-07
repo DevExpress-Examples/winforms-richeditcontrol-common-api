@@ -501,26 +501,6 @@ namespace RichEditAPISample.CodeExamples {
         }
         #endregion #CreateNewDocumentCustomActionHandler
 
-        static void CreateDocumentServer(RichEditControl richEditControl, BarButtonItem buttonCustomAction) {
-            #region #CreateDocumentServer
-            buttonCustomAction.ItemClick += buttonCustomAction_ItemClick_DocumentServer;
-            buttonCustomAction.Tag = richEditControl;
-            richEditControl.Text = "Click the 'Custom Action' button located in the ribbon ";
-            richEditControl.Text += "to insert a content of the 'DocumentServerTest.docx' file into a current document's position \r\n";
-            #endregion #CreateDocumentServer
-        }
-
-        #region #CreateDocumentServerCustomActionHandler
-        static void buttonCustomAction_ItemClick_DocumentServer(object sender, ItemClickEventArgs e) {
-            RichEditControl richEdit = e.Item.Tag as RichEditControl;
-            IRichEditDocumentServer server = richEdit.CreateDocumentServer();
-            using(System.IO.FileStream fs = new System.IO.FileStream("Documents\\DocumentServerTest.docx", System.IO.FileMode.Open)) {
-                server.LoadDocument(fs, DevExpress.XtraRichEdit.DocumentFormat.OpenXml);
-                richEdit.Document.InsertDocumentContent(richEdit.Document.CaretPosition, server.Document.Range);
-            }
-        }
-        #endregion #CreateDocumentServerCustomActionHandler
-
         static void CreateAndExecuteCommands(RichEditControl richEditControl, BarButtonItem buttonCustomAction) {
             #region #CreateAndExecuteCommands
             buttonCustomAction.ItemClick += buttonCustomAction_ItemClick_Commands;
@@ -632,7 +612,7 @@ namespace RichEditAPISample.CodeExamples {
         static void SimpleViewLineNumbering(RichEditControl richEditControl, BarButtonItem buttonCustomAction) {
             #region #SimpleViewLineNumbering
             richEditControl.LoadDocument("Documents\\Grimm.docx", DevExpress.XtraRichEdit.DocumentFormat.OpenXml);
-            richEditControl.Views.SimpleView.Padding = new PortablePadding(60, 4, 4, 0);
+            richEditControl.Views.SimpleView.Padding = new DevExpress.Portable.PortablePadding(60, 4, 4, 0);
             richEditControl.Views.SimpleView.AllowDisplayLineNumbers = true;
             richEditControl.ActiveViewType = RichEditViewType.Simple;
             richEditControl.Document.Sections[0].LineNumbering.CountBy = 1;

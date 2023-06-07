@@ -508,27 +508,7 @@ Namespace RichEditAPISample.CodeExamples
 			Dim richEdit As RichEditControl = TryCast(e.Item.Tag, RichEditControl)
 			richEdit.CreateNewDocument()
 		End Sub
-        '			#End Region '#CreateNewDocumentCustomActionHandler
-
-        Private Shared Sub CreateDocumentServer(ByVal richEditControl As RichEditControl, ByVal buttonCustomAction As BarButtonItem)
-'			#Region "#CreateDocumentServer"
-			AddHandler buttonCustomAction.ItemClick, AddressOf buttonCustomAction_ItemClick_DocumentServer
-			buttonCustomAction.Tag = richEditControl
-			richEditControl.Text = "Click the 'Custom Action' button located on the RibbonControl "
-			richEditControl.Text &= "to insert a content of the 'DocumentServerTest.docx' file into a current document's position " & Constants.vbCrLf
-'			#End Region ' #CreateDocumentServer
-		End Sub
-
-'			#Region "#CreateDocumentServerCustomActionHandler"
-		Private Shared Sub buttonCustomAction_ItemClick_DocumentServer(ByVal sender As Object, ByVal e As ItemClickEventArgs)
-			Dim richEdit As RichEditControl = TryCast(e.Item.Tag, RichEditControl)
-			Dim server As IRichEditDocumentServer = richEdit.CreateDocumentServer()
-			Using fs As New System.IO.FileStream("Documents\DocumentServerTest.docx", System.IO.FileMode.Open)
-				server.LoadDocument(fs, DevExpress.XtraRichEdit.DocumentFormat.OpenXml)
-				richEdit.Document.InsertDocumentContent(richEdit.Document.CaretPosition, server.Document.Range)
-			End Using
-		End Sub
-'			#End Region ' #CreateDocumentServerCustomActionHandler
+		'			#End Region '#CreateNewDocumentCustomActionHandler
 
 		Private Shared Sub CreateAndExecuteCommands(ByVal richEditControl As RichEditControl, ByVal buttonCustomAction As BarButtonItem)
 '			#Region "#CreateAndExecuteCommands"
@@ -648,7 +628,7 @@ Namespace RichEditAPISample.CodeExamples
     		Private Shared Sub SimpleViewLineNumbering(ByVal richEditControl As RichEditControl, ByVal buttonCustomAction As BarButtonItem)
 '			#Region "#SimpleViewLineNumbering"
 			richEditControl.LoadDocument("Documents\Grimm.docx", DevExpress.XtraRichEdit.DocumentFormat.OpenXml)
-			richEditControl.Views.SimpleView.Padding = New PortablePadding(60, 4, 4, 0)
+			richEditControl.Views.SimpleView.Padding = New DevExpress.Portable.PortablePadding(60, 4, 4, 0)
 			richEditControl.Views.SimpleView.AllowDisplayLineNumbers = True
 			richEditControl.ActiveViewType = RichEditViewType.Simple
 			richEditControl.Document.Sections(0).LineNumbering.CountBy = 1
