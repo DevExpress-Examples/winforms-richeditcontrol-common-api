@@ -28,7 +28,7 @@ Some of the RichEditControl's methods are executed by clicking the "Custom Acti
 * [Visual Elements in Rich Text Editor for WinForms](https://docs.devexpress.com/WindowsForms/9548/controls-and-libraries/rich-text-editor/visual-elements)
 * [Commands in Rich Text Editor](https://docs.devexpress.com/WindowsForms/9328/controls-and-libraries/rich-text-editor/commands)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-richeditcontrol-common-api&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-richeditcontrol-common-api&~~~was_helpful=no)
 
